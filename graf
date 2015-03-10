@@ -1,0 +1,144 @@
+#include <stdlib.h>
+#include <GL/glut.h>
+#include <math.h>
+#include <iostream>
+
+
+using namespace std;
+
+void rysuj_inicjaly();
+
+
+void Display() // funkcja generująca scenę 3D
+{
+    glClearColor( 0.0, 0.0, 0.0, 1.0 );	// kolor tła - zawartość bufora koloru
+    
+    glClear( GL_COLOR_BUFFER_BIT );		// czyszczenie bufora koloru
+    
+    glColor3f( 0.0, 1.0, 0.0 );			// kolor rysowania
+	
+	/* tu wywoluje sie wszystkie funkcje... */
+
+	rysuj_inicjaly();
+
+    glFlush();
+    
+    glutSwapBuffers();	// zamiana buforów koloru
+}
+
+
+
+
+void Reshape( int width, int height )
+{
+    Display();	// generowanie sceny 3D
+}
+
+
+
+int main( int argc, char * argv[] )
+{
+
+
+	glutInit( & argc, argv );	// inicjalizacja biblioteki GLUT
+    
+    glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGB );	// inicjalizacja bufora ramki
+    
+    glutInitWindowSize( 350, 250 );	// rozmiary głównego okna programu
+    
+    glutCreateWindow( "Marta Kramarczyk - inicjaly" );	// utworzenie głównego okna programu
+    
+    glutDisplayFunc( Display );	// dołączenie funkcji generującej scenę 3D
+
+    glutReshapeFunc( Reshape );	// dołączenie funkcji wywoływanej przy zmianie rozmiaru okna
+    
+    glutMainLoop();	// wprowadzenie programu do obsługi pętli komunikatów
+
+    return 0;
+
+}
+
+
+void rysuj_inicjaly(){
+
+
+
+
+	glBegin(GL_LINES);
+
+	glVertex2f(0.1,0.4);
+	glVertex2f(0.1,0.9);
+	
+
+	glEnd();
+
+	///////////////////
+
+	glBegin(GL_LINES);
+
+	glVertex2f(0.1,0.9);
+	glVertex2f(0.3,0.7);
+	
+
+	glEnd();
+
+	///////////////////
+
+	glBegin(GL_LINES);
+
+	glVertex2f(0.3,0.7);
+	glVertex2f(0.5,0.9);
+	
+
+	glEnd();
+
+	///////////////////
+
+	
+	glBegin(GL_LINES);
+
+	glVertex2f(0.5,0.9);
+	glVertex2f(0.5,0.4);
+	
+
+	glEnd();
+
+	///////////////////
+
+	glBegin(GL_LINES);
+
+	glVertex2f(0.6,0.4);
+	glVertex2f(0.6,0.9);
+	
+
+	glEnd();
+
+	///////////////////
+
+	glBegin(GL_LINES);
+
+	glVertex2f(0.6,0.6);
+	glVertex2f(0.8,0.9);
+	
+
+	glEnd();
+
+	///////////////////
+
+
+	glBegin(GL_LINES);
+
+	glVertex2f(0.6,0.6);
+	glVertex2f(0.8,0.4);
+	
+
+	glEnd();
+
+	///////////////////
+
+
+
+
+	
+
+}
