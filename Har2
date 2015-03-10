@@ -1,0 +1,44 @@
+Gra karciana Blacjack
+
+1) Okienka SWING
+
+- menu główne programu(logowanie, przycisk start itd)
+- okno ustawiania stawki na daną grę(? być może będzie to rozwiązane inaczej, stała stawka bądź wbudowane to okno w okno rozgrywki)
+- okno rozgrywki (stół na którym jest rozgrywana gra, pojawiające się na nim rozdawane karty)
+- okno statystyk (ile rozdań wygranych/przegranych)
+
+2) Zapis/odczyt plików
+
+- 
+- Zapisywanie stanu gry do pliku.
+- Odczytywanie stanu gry z pliku  Serializacja
+- Zapis i odczyt konfiguracji z serwerem
+
+3) Wątki
+
+- Główny wątek dla GUI
+- Obsługa sieci w oddzielnym wątku
+- Czas gry(od podłączenia się do serwera).
+- Muzyka w tle
+4) Bazy danych
+
+- zapis statystyk w bazie danych (ilość wygranych/przegranych przez danego użytkownika <a może też ogólnie?>)
+- dodawanie, usuwanie, aktualizacja rekordów(nowy użytkownik np)
+- logika autoryzacji 
+- ??
+5) Socket
+
+- Stworzenie klienta ?
+- Stworzenie serwera ?
+- Wysyłanie najlepszych wyników na serwer
+- Protokół komunikacji
+
+- ??
+
+6) Dodatkowe:
+- Multiplayer ?
+- status wygranej/przegranej
+- algorytm dobierania kart przez Dealera-CPU (Draw to 16, Stand on 17 itd)
+- zasady wysokości wygranej(2:1, BlackJack 3:1)
+- zabezpieczenie przed dobraniem zbyt dużej ilości kart(maks 5)
+- algorytm tasowania kart i rozdawania przez CPU
